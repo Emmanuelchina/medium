@@ -18,8 +18,8 @@
             <div class="container mx-auto px-6 md:px-0">
                 <div class="flex items-center justify-center">
                     <div class="mr-6">
-                        <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                            {{ config('app.name', 'Laravel') }}
+                        <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline font-bold font-serif">
+                            Medium
                         </a>
                     </div>
                     <div class="flex-1 text-right">
@@ -30,6 +30,11 @@
                             @endif
                         @else
                             <span class="text-gray-300 text-sm pr-4">{{ Auth::user()->name }}</span>
+
+                            <a href="{{ route('logout') }}"
+                               class="no-underline hover:underline text-gray-300 text-sm p-3">
+                                <b>+</b> Post
+                            </a>
 
                             <a href="{{ route('logout') }}"
                                class="no-underline hover:underline text-gray-300 text-sm p-3"
