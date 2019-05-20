@@ -15,49 +15,35 @@
                             you love, and interact with stories.
                         </p>
                     </div>
-                    <form class="w-full p-6" method="POST" action="{{ route('login') }}">
+                    <form class="w-full p-6 " method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="flex flex-wrap mb-6">
-                            <div class="w-1/3">
-                                <input id="email" type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline{{ $errors->has('email') ? ' border-red-500' : '' }}" placeholder="Email Address" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <p class="text-red-500 text-xs italic mt-4">
-                                        {{ $errors->first('email') }}
-                                    </p>
-                                @endif
-                            </div>
+                            <input id="email" type="email" class="shadow appearance-none w-1/3 mx-auto border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline{{ $errors->has('email') ? ' border-red-500' : '' }}" placeholder="Email Address" name="email" value="{{ old('email') }}" required autofocus>
+                            @if ($errors->has('email'))
+                                <p class="text-red-500 text-xs italic mt-4">
+                                    {{ $errors->first('email') }}
+                                </p>
+                            @endif
                         </div>
-
                         <div class="flex flex-wrap mb-6">
-                            <div class="w-1/3">
-                            <input id="password" type="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline{{ $errors->has('password') ? ' border-red-500' : '' }}" placeholder="Password" name="password" required>
-
+                            <input id="password" type="password" class="shadow w-1/3 mx-auto appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline{{ $errors->has('password') ? ' border-red-500' : '' }}" placeholder="Password" name="password" required>
                             @if ($errors->has('password'))
                                 <p class="text-red-500 text-xs italic mt-4">
                                     {{ $errors->first('password') }}
                                 </p>
                             @endif
-                            </div>
                         </div>
-
-                        <div class="flex mb-6">
-                            <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                        </div>
-                        
-                        <div class="flex flex-wrap items-center">
-                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-gray-100 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        <div class="flex flex-wrap items-center text-center">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 w-1/3 mx-auto text-gray-100 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                 {{ __('Login') }}
                             </button>
-
                             @if (Route::has('password.request'))
-                                <p class="w-full text-xs text-center">
+                                <p class="w-full text-xs text-center mt-8">
                                     <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline ml-auto" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 </p>
                             @endif
-
                             @if (Route::has('register'))
                                 <p class="w-full text-xs text-center text-gray-700 mt-8 mb-6">
                                     Don't have an account?
