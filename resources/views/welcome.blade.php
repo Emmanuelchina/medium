@@ -35,29 +35,31 @@
             </div>
             <div class="p-3 pl-12">
                 <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">HOME</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">ONEZERO</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">ELEMENTAL</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">HEATED</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">TECH</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">STARTUPS</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">SELF</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">POLITICS</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">HEALTH</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">DESIGN</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">HUMAN PARTS</a>
-                <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">MORE</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">ONEZERO</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">ELEMENTAL</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">HEATED</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">TECH</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">STARTUPS</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">SELF</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">POLITICS</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">HEALTH</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">DESIGN</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">HUMAN PARTS</a>
+                <a href="#" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">MORE</a>
             </div>
-            <div class="flex mb-4 bg-green-200 p-3 mt-4">
-                <div class="w-1/3 bg-gray-400 h-12"></div>
-                <div class="w-1/3 bg-gray-500 h-12"></div>
-                <div class="w-1/3 bg-gray-400 h-12"></div>
+            <div class="flex mb-4 bg-gray-400 p-3 mt-4">
+                <div class="w-1/3 bg-gray-200 p-3">GRID 1</div>
+                <div class="w-1/3 bg-gray-500 p-3">GRID 2</div>
+                <div class="w-1/3 bg-gray-200 p-3">GRID 3</div>
             </div>
-            <div class="bg-yellow-200 p-3">
-                NEVER MISS A STORY
+            <div class="bg-gray-400 p-3">
+                <div class="bg-gray-200 p-3">
+                    NEVER MISS A STORY
+                </div>
             </div>
-            <div class="flex mb-4 mt-6">
-                <div class="w-3/4 bg-gray-400 h-12"></div>
-                <div class="w-1/4 bg-gray-500 h-12"></div>
+            <div class="flex bg-gray-400 p-3 mb-4 mt-6">
+                <div class="w-3/4 bg-gray-200 p-3">GRID 1</div>
+                <div class="w-1/4 bg-gray-500 p-3">GRID 2</div>
             </div>
         </div>
     </div>
