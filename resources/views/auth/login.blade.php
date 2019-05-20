@@ -39,8 +39,8 @@
                             </button>
                             @if (Route::has('password.request'))
                                 <p class="w-full text-xs text-center mt-8">
-                                    <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline ml-auto" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                    <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline ml-auto" href="#">
+                                        {{ __('Forgot Your Password ?') }}
                                     </a>
                                 </p>
                             @endif
