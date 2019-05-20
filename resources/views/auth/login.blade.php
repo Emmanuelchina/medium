@@ -5,73 +5,64 @@
         <div class="flex flex-wrap justify-center">
             <div class="w-8/12">
                 <div class="flex flex-col break-words bg-white border border-2 rounded shadow-md">
-                    <div class="p-5 text-center">
-                        <p class="font-bold">
+                    <div class="p-5 text-center mt-6">
+                        <p class="font-bold font-serif font-bold text-2xl">
                             Welcome back.
                         </p>
-                        <p>
-                            Sign in to get personalized story recommendations, follow authors and topics you love, and interact with stories.
+                        <p class="pt-6 leading-normal">
+                            Sign in to get personalized story<br/>
+                            recommendations, follow authors and topics<br/>
+                            you love, and interact with stories.
                         </p>
                     </div>
-                    <div class="font-semibold bg-gray-200 text-gray-700 py-3 px-6 mb-0">
-                        {{ __('Login') }}
-                    </div>
-
                     <form class="w-full p-6" method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="flex flex-wrap mb-6">
-                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">
-                                {{ __('E-Mail Address') }}:
-                            </label>
+                            <div class="w-1/3">
+                                <input id="email" type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline{{ $errors->has('email') ? ' border-red-500' : '' }}" placeholder="Email Address" name="email" value="{{ old('email') }}" required autofocus>
 
-                            <input id="email" type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline{{ $errors->has('email') ? ' border-red-500' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                            @if ($errors->has('email'))
-                                <p class="text-red-500 text-xs italic mt-4">
-                                    {{ $errors->first('email') }}
-                                </p>
-                            @endif
+                                @if ($errors->has('email'))
+                                    <p class="text-red-500 text-xs italic mt-4">
+                                        {{ $errors->first('email') }}
+                                    </p>
+                                @endif
+                            </div>
                         </div>
 
                         <div class="flex flex-wrap mb-6">
-                            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">
-                                {{ __('Password') }}:
-                            </label>
-
-                            <input id="password" type="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline{{ $errors->has('password') ? ' border-red-500' : '' }}" name="password" required>
+                            <div class="w-1/3">
+                            <input id="password" type="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline{{ $errors->has('password') ? ' border-red-500' : '' }}" placeholder="Password" name="password" required>
 
                             @if ($errors->has('password'))
                                 <p class="text-red-500 text-xs italic mt-4">
                                     {{ $errors->first('password') }}
                                 </p>
                             @endif
+                            </div>
                         </div>
 
                         <div class="flex mb-6">
                             <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                            <label class="text-sm text-gray-700 ml-3" for="remember">
-                                {{ __('Remember Me') }}
-                            </label>
                         </div>
-
+                        
                         <div class="flex flex-wrap items-center">
                             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-gray-100 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                 {{ __('Login') }}
                             </button>
 
                             @if (Route::has('password.request'))
-                                <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline ml-auto" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
+                                <p class="w-full text-xs text-center">
+                                    <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline ml-auto" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                </p>
                             @endif
 
                             @if (Route::has('register'))
-                                <p class="w-full text-xs text-center text-gray-700 mt-8 -mb-4">
+                                <p class="w-full text-xs text-center text-gray-700 mt-8 mb-6">
                                     Don't have an account?
                                     <a class="text-blue-500 hover:text-blue-700 no-underline" href="{{ route('register') }}">
-                                        Register
+                                        Create One
                                     </a>
                                 </p>
                             @endif

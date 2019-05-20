@@ -16,8 +16,8 @@
 <body class="bg-gray-100 h-screen antialiased leading-none">
     <div class="container mx-auto flex justify-center items-center">
         <div class="w-11/12">
-            <div class="p-8 overflow-hidden">
-                <div class="float-left font-serif font-bold text-xl">
+            <div class="p-8 pl-12 overflow-hidden">
+                <div class="float-left font-serif font-bold text-2xl">
                     Medium
                 </div>
                 @if(Route::has('login'))
@@ -33,7 +33,7 @@
                     </div>
                 @endif
             </div>
-            <div class="p-3">
+            <div class="p-3 pl-12">
                 <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">HOME</a>
                 <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">ONEZERO</a>
                 <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">ELEMENTAL</a>
@@ -47,11 +47,17 @@
                 <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">HUMAN PARTS</a>
                 <a href="/" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">MORE</a>
             </div>
-            <div class="bg-green-200 p-3">
-                MIDDLE
+            <div class="flex mb-4 bg-green-200 p-3 mt-4">
+                <div class="w-1/3 bg-gray-400 h-12"></div>
+                <div class="w-1/3 bg-gray-500 h-12"></div>
+                <div class="w-1/3 bg-gray-400 h-12"></div>
             </div>
             <div class="bg-yellow-200 p-3">
-                BOTTOM
+                NEVER MISS A STORY
+            </div>
+            <div class="flex mb-4 mt-6">
+                <div class="w-3/4 bg-gray-400 h-12"></div>
+                <div class="w-1/4 bg-gray-500 h-12"></div>
             </div>
         </div>
     </div>
