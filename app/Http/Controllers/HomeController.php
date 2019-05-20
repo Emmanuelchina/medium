@@ -27,7 +27,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user()->id;
+
+        $data['articles'] = Post::where('user_id','=',$user)->paginate(15);
+
+        return view('home', $data);
     }
 
     /**
